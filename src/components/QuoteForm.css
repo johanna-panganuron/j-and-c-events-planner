@@ -1,0 +1,221 @@
+.quote {
+  background: var(--dark);
+}
+
+.quote .section-tag.light::before {
+  background: var(--blush);
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.quote-intro .section-title {
+  margin-bottom: 1.5rem;
+}
+
+.quote-promises {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.quote-promise {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: rgba(245, 239, 230, 0.65);
+  line-height: 1.6;
+}
+
+.quote-promise-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blush-deep);
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.quote-contact {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(245, 239, 230, 0.1);
+}
+
+.quote-contact-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245, 239, 230, 0.4);
+  margin-bottom: 0.5rem;
+}
+
+.quote-contact-value {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--blush);
+}
+
+/* Form */
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245, 239, 230, 0.5);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  background: rgba(245, 239, 230, 0.06);
+  border: 1px solid rgba(245, 239, 230, 0.14);
+  color: var(--cream);
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  font-family: var(--sans);
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+  width: 100%;
+  border-radius: 0;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(245, 239, 230, 0.25);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: rgba(239, 201, 194, 0.5);
+  background: rgba(245, 239, 230, 0.1);
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(245,239,230,0.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form-select option {
+  background: var(--dark);
+  color: var(--cream);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.form-error {
+  font-size: 0.7rem;
+  color: #e8a0a0;
+  margin-top: 0.1rem;
+  min-height: 1em;
+}
+
+.form-submit {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-submit {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  background: var(--blush);
+  color: var(--dark);
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: background 0.2s;
+  font-weight: 400;
+}
+
+.btn-submit:hover {
+  background: var(--blush-deep);
+}
+
+.btn-submit:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.form-note {
+  font-size: 0.75rem;
+  color: rgba(245, 239, 230, 0.35);
+  line-height: 1.6;
+}
+
+.form-success {
+  padding: 3rem 2rem;
+  border: 1px solid rgba(239, 201, 194, 0.25);
+  text-align: center;
+}
+
+.form-success-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.form-success h3 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--blush);
+  margin-bottom: 0.75rem;
+}
+
+.form-success p {
+  font-size: 0.88rem;
+  color: rgba(245, 239, 230, 0.6);
+  max-width: 360px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .quote-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

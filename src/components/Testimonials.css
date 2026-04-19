@@ -1,0 +1,83 @@
+.testimonials { background: var(--sage-light); overflow: hidden; }
+
+.testimonials-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.testimonials-wrap .section-title { margin: 0 auto 0; }
+
+.quote-mark {
+  font-family: var(--serif);
+  font-size: 7rem;
+  color: var(--sage-deep);
+  line-height: 0.5;
+  margin: 2.5rem 0;
+  opacity: 0.35;
+}
+
+.t-slides {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  min-height: 170px;
+}
+
+.t-slide {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  pointer-events: none;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+}
+.t-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+.t-text {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2.3vw, 1.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--dark);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+.t-author {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+}
+.t-event {
+  font-size: 0.72rem;
+  color: var(--mid);
+  margin-top: 0.3rem;
+}
+
+.t-dots {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 2.5rem;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sage);
+  opacity: 0.35;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s, transform 0.2s;
+  padding: 0;
+}
+.dot.active {
+  opacity: 1;
+  transform: scale(1.35);
+  background: var(--sage-deep);
+}
