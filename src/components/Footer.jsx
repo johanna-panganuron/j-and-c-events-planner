@@ -103,9 +103,20 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p className="footer-copy">
-            &copy; {year} J &amp; C Events. All rights reserved.
-          </p>
+          <div className="footer-credits">
+            <p className="footer-copy">
+              &copy; {year} J &amp; C Events. All rights reserved.
+            </p>
+            <a
+              href="https://johanna-panganuron.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="designer-link"
+            >
+              Developed by Johanna B. Panganuron
+            </a>
+          </div>
+
           <nav className="footer-legal">
             <a href="#">Privacy policy</a>
             <a href="#">Terms of service</a>
