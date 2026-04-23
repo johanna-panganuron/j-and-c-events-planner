@@ -108,7 +108,7 @@ export default function Footer() {
               &copy; {year} J &amp; C Events. All rights reserved.
             </p>
             <a
-              href="https://johanna-panganuron.vercel.app"
+              href="https://johannapanganuron.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="designer-link"
